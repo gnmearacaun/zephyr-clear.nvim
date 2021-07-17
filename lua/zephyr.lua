@@ -7,7 +7,6 @@ local zephyr = {
 	base1 = "#1c1f24",
 	base2 = "#202328",
 	base3 = "#23272e",
-	-- base4 = "#3f444a",
 	base4 = "#5B6268",
 	base5 = "#73797e",
 	base6 = "#9ca0a4",
