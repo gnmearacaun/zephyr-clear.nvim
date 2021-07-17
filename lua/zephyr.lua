@@ -127,8 +127,8 @@ function zephyr.load_syntax()
 		SpellCap = { fg = zephyr.blue, bg = zephyr.none, style = "undercurl" },
 		SpellLocal = { fg = zephyr.cyan, bg = zephyr.none, style = "undercurl" },
 		SpellRare = { fg = zephyr.violet, bg = zephyr.none, style = "undercurl" },
-		Visual = { fg = zephyr.yellow, bg = zephyr.bg_visual },
-		VisualNOS = { fg = zephyr.yellow, bg = zephyr.bg_visual },
+		Visual = { fg = zephyr.cyan, bg = zephyr.bg_visual },
+		VisualNOS = { fg = zephyr.cyan, bg = zephyr.bg_visual },
 		QuickFixLine = { fg = zephyr.violet, style = "bold" },
 		Debug = { fg = zephyr.orange },
 		debugBreakpoint = { fg = zephyr.bg, bg = zephyr.red },
@@ -306,6 +306,6 @@ function zephyr.colorscheme()
 	async_load_plugin:send()
 end
 
-zephyr.colorscheme()
+zephyr-clear.colorscheme()
 
 return zephyr
