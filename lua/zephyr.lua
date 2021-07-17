@@ -1,5 +1,6 @@
--- Theme: zephyr
--- Author: Glepnir
+-- Theme: zephyr-clear
+-- Author: gnmearacaun
+-- forked from: Glepnir
 -- license: mit
 -- source: http://github.com/glepnir/zephyr-nvim
 local zephyr = {
