@@ -1,4 +1,4 @@
-# zephyr-nvim
+# zephyr-clear
 A transparent neovim colorscheme written in lua and syntax based on
 [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter).
 My goal in forking the original `zephyr` project was to improve it for transparent backgrounds and markdown.
