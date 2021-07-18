@@ -1,19 +1,20 @@
--- Theme: zephyr-clear
--- Author: gnmearacaun
--- forked from: Glepnir
+-- Theme: zephyr
+-- Author: Glepnir
 -- license: mit
 -- source: http://github.com/glepnir/zephyr-nvim
 local zephyr = {
 	base0 = "#1B2229",
 	base1 = "#1c1f24",
 	base2 = "#202328",
-	base3 = "#23272e",
+	-- base3 = "#23272e",
+	base3 = "#3f444a",
 	base4 = "#5B6268",
 	base5 = "#73797e",
 	base6 = "#9ca0a4",
-	base7 = "#9ca0a4",
-	base8 = "#b1b1b1",
+	base7 = "#b1b1b1",
+	base8 = "#c8d0de",
 
+	comment = "#95989c",
 	bg = "#282a36",
 	bg1 = "#504945",
 	bg_popup = "#3E4556",
@@ -21,12 +22,12 @@ local zephyr = {
 	bg_visual = "#3f444a",
 
 	fg = "#bbc2cf",
-	fg_alt = "#73797e",
-	-- fg_alt = "#5B6268",
+	fg_alt = "#5B6268",
 
 	red = "#e95678",
-
 	redwine = "#d16d9e",
+	spell = "#d19c70",
+	-- spell = "#f5c996",
 	orange = "#D98E48",
 	yellow = "#f0c674",
 
@@ -84,8 +85,8 @@ function zephyr.load_syntax()
 		VertSplit = { fg = zephyr.black, bg = zephyr.bg },
 		Folded = { fg = zephyr.grey, bg = zephyr.bg_highlight },
 		EndOfBuffer = { fg = zephyr.bg, bg = zephyr.none },
-		IncSearch = { fg = zephyr.bg1, bg = zephyr.orange, style = zephyr.none },
-		Search = { fg = zephyr.bg, bg = zephyr.orange },
+		IncSearch = { fg = zephyr.fg, bg = zephyr.fg_alt, style = zephyr.none },
+		Search = { fg = zephyr.fg, bg = zephyr.fg_alt },
 		ColorColumn = { fg = zephyr.none, bg = zephyr.bg_highlight },
 		Conceal = { fg = zephyr.grey, bg = zephyr.none },
 		Cursor = { fg = zephyr.none, bg = zephyr.none, style = "reverse" },
@@ -95,9 +96,9 @@ function zephyr.load_syntax()
 		CursorIM = { fg = zephyr.none, bg = zephyr.none, style = "reverse" },
 		CursorColumn = { fg = zephyr.none, bg = zephyr.bg_highlight },
 		CursorLine = { fg = zephyr.none, bg = zephyr.bg_highlight },
-		LineNr = { fg = zephyr.base4 },
+		LineNr = { fg = zephyr.base5 },
 		qfLineNr = { fg = zephyr.cyan },
-		CursorLineNr = { fg = zephyr.blue },
+		CursorLineNr = { fg = zephyr.base6 },
 		DiffAdd = { fg = zephyr.black, bg = zephyr.dark_green },
 		DiffChange = { fg = zephyr.black, bg = zephyr.yellow },
 		DiffDelete = { fg = zephyr.black, bg = zephyr.red },
@@ -123,23 +124,30 @@ function zephyr.load_syntax()
 		TabLineSel = { fg = zephyr.fg, bg = zephyr.fg_alt },
 		StatusLine = { fg = zephyr.base8, bg = zephyr.base2, style = zephyr.none },
 		StatusLineNC = { fg = zephyr.grey, bg = zephyr.base2, style = zephyr.none },
-		SpellBad = { fg = zephyr.red, bg = zephyr.none, style = "undercurl" },
-		SpellCap = { fg = zephyr.blue, bg = zephyr.none, style = "undercurl" },
+		-- SpellBad = { fg = zephyr.red, bg = zephyr.none, style = "undercurl" },
+		SpellBad = { fg = zephyr.yellow, bg = zephyr.none },
+		-- SpellCap = { fg = zephyr.blue, bg = zephyr.none, style = "undercurl" },
+		SpellCap = { fg = zephyr.blue, bg = zephyr.none },
 		SpellLocal = { fg = zephyr.cyan, bg = zephyr.none, style = "undercurl" },
 		SpellRare = { fg = zephyr.violet, bg = zephyr.none, style = "undercurl" },
 		Visual = { fg = zephyr.cyan, bg = zephyr.bg_visual },
 		VisualNOS = { fg = zephyr.cyan, bg = zephyr.bg_visual },
 		QuickFixLine = { fg = zephyr.violet, style = "bold" },
 		Debug = { fg = zephyr.orange },
-		debugBreakpoint = { fg = zephyr.bg, bg = zephyr.red },
+		debugBspellreakpoine = { fg = zephyr.bg, bg = zephyr.red },
 
 		Boolean = { fg = zephyr.orange },
 		Number = { fg = zephyr.brown },
 		Float = { fg = zephyr.brown },
-		PreProc = { fg = zephyr.violet },
-		PreCondit = { fg = zephyr.violet },
-		Include = { fg = zephyr.violet },
-		Define = { fg = zephyr.violet },
+		PreProc = { fg = zephyr.cyan },
+		PreCondit = { fg = zephyr.cyan },
+
+		-- PreProc = { fg = zephyr.violet },
+		-- PreCondit = { fg = zephyr.violet },
+		Include = { fg = zephyr.red },
+		Define = { fg = zephyr.red },
+		-- Include = { fg = zephyr.violet },
+		-- Define = { fg = zephyr.violet },
 		Conditional = { fg = zephyr.magenta },
 		Repeat = { fg = zephyr.magenta },
 		Keyword = { fg = zephyr.green },
@@ -183,7 +191,8 @@ function zephyr.load_plugin_syntax()
 		TSFunction = { fg = zephyr.cyan },
 		TSMethod = { fg = zephyr.cyan },
 		TSKeywordFunction = { fg = zephyr.red },
-		TSProperty = { fg = zephyr.yellow },
+		TSProperty = { fg = zephyr.base8 },
+		-- TSProperty = { fg = zephyr.yellow },
 		TSType = { fg = zephyr.teal },
 		TSVariable = { fg = zephyr.blue },
 		TSPunctBracket = { fg = zephyr.bracket },
@@ -306,6 +315,6 @@ function zephyr.colorscheme()
 	async_load_plugin:send()
 end
 
-zephyr-clear.colorscheme()
+zephyr.colorscheme()
 
 return zephyr
