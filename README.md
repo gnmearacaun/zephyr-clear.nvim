@@ -27,6 +27,8 @@ colorscheme zephyr_clear
 local zephyr_clear =  require('zephyr_clear').
 zephyr.yellow/teal/fg/bg
 ```
-### Preview
+### Previews
 
-![zephyr](https://user-images.githubusercontent.com/41671631/110207650-e291ee80-7ebf-11eb-813d-305fee299322.png)
+![readme.md](https://github.com/gnmearacaun/zephyr-clear.nvim/blob/main/readme.md.png)
+![lv-config](https://github.com/gnmearacaun/zephyr-clear.nvim/blob/main/config.png)
+![lunarvim-dashboard](https://github.com/gnmearacaun/zephyr-clear.nvim/blob/main/dashboard.png)
