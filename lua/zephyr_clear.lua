@@ -16,6 +16,7 @@ local zephyr = {
 
 	comment = "#95989c",
 	bg = "#282a36",
+	-- bg = "#282a36",
 	bg1 = "#504945",
 	bg_popup = "#3E4556",
 	bg_highlight = "#2E323C",
@@ -78,11 +79,11 @@ end
 
 function zephyr.load_syntax()
 	local syntax = {
-		Normal = { fg = zephyr.fg, bg = zephyr.bg },
-		Terminal = { fg = zephyr.fg, bg = zephyr.bg },
-		SignColumn = { fg = zephyr.fg, bg = zephyr.bg },
+		Normal = { fg = zephyr.fg, bg = zephyr.none },
+		Terminal = { fg = zephyr.fg, bg = zephyr.none },
+		SignColumn = { fg = zephyr.fg, bg = zephyr.none },
 		FoldColumn = { fg = zephyr.fg_alt, bg = zephyr.black },
-		VertSplit = { fg = zephyr.black, bg = zephyr.bg },
+		VertSplit = { fg = zephyr.black, bg = zephyr.none },
 		Folded = { fg = zephyr.grey, bg = zephyr.bg_highlight },
 		EndOfBuffer = { fg = zephyr.bg, bg = zephyr.none },
 		IncSearch = { fg = zephyr.fg, bg = zephyr.fg_alt, style = zephyr.none },
